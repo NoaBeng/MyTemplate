@@ -23,11 +23,5 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-}
-
-.wrapper{
-  width: 100%;
-  margin: 0 auto;
-  overflow-x: hidden;
-  overflow-y: auto;
+  direction: rtl;
 }

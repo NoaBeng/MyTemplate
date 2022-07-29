@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import "./NavBar.css";
 import { Icon } from "react-icons-kit";
 import { menu } from "react-icons-kit/feather/menu";
@@ -13,12 +13,20 @@ export default function NavBar() {
   };
   return (
     <nav className={`navbar ${showMenuLinks && "expanded"}`}>
-      <h2 className="logo">NavBar</h2>
+      <h2 className="logo">קעקואלה</h2>
       <ul className="links">
-        <li>Home</li>
-        <li>About</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+        <li>
+          <Link to="/">בית</Link>
+        </li>
+        <li>
+          <Link to="/about">אודות</Link>
+        </li>
+        <li>
+          <Link to="/store">חנות</Link>
+        </li>
+        <li>
+          <Link to="/contact">צור קשר</Link>
+        </li>
       </ul>
       <div className="toggle-icon" onClick={handleToggle}>
         <Icon size={28} icon={showMenuLinks ? x : menu} />
